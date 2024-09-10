@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>WRD - ispit</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./dialog/fit-dialog.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="wrap">
+        <header id="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <button id="primary-nav-button" type="button">Menu</button>
+                        <a href="index.html">
+                            <div class="logo">
+                                <img src="img/logo.png" alt="Venue Logo">
+                            </div>
+                        </a>
+                        <nav id="primary-nav" class="dropdown cf">
+                            <ul class="dropdown menu">
+                                <li class='active'><a href="#">Popular</a></li>
+                                <li><a href="#">Most Visited</a>
+                                </li>
+                                <li><a href="#">Blog Entries</a></li>
+                                <li><a href="#">Our Services</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </nav><!-- / #primary-nav -->
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+
+
+    <section class="banner">
+        <div class="container">
+            <div class="row">
+                <div>
+                    <div class="banner-caption">
+                        <div class="line-dec"></div>
+                        <h2>Best Finder For You</h2>
+                        <span>Suspendisse eu lorem massa. Integer sit amet posuere tellus.</span>
+                        <div class="blue-button">
+                            <a>Discover More</a>
+                        </div>
+                    </div>
+                    <div class="search-form">
+                        <div>
+                            <div>
+                                <fieldset>
+                                    <input type="text" class="form-control"
+                                        placeholder="Grad ili država" required="">
+                                </fieldset>
+                            </div>
+                            <div class="">
+                                <fieldset>
+                                    <button type="submit">Search Now</button>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="featured-places">
+        <div class="container">
+            <div class="row" id="destinacije">
+            </div>
+        </div>
+
+        <div class="container">
+            <label>Rezultat Koraka 2: Putovanja/polasci za državi <span id="drzavaSpan"></span></label>
+            <div style="overflow-x: auto;">
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Putovanje ID</th>
+                            <th>Polazak</th>
+                            <th>Povratak</th>
+                            <th>Broj dana</th>
+                            <th>Broj slobodnih mjesta</th>
+                            <th>Cijena</th>
+                            <th>Odaberi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="putovanjaTabela">
+
+                    </tbody>
+                </table>
+            </div>
+    </section>
+
+
+
+
+    <div id="contact-form">
+
+        <div class="container2">
+            <div class="item">
+                <label for="drzavaText">Drzava</label>
+                <input type="text" id="drzavaText" disabled />
+            </div>
+            <div class="item">
+                <label for="datumPolaska">Datum polaska</label>
+                <input type="text" id="datumPolaska" disabled />
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="container2">
+            <div class="item">
+                <label class="bold" for="brojGostiju">Broj gostiju</label>
+                <input type="number" id="brojGostiju" value="1" min="1" max="5" oninput="promjenaBrojaGostiju()" />
+            </div>
+            <div class="item">
+                <label for="cijenaPoGostu">Cijena po gostu</label>
+                <input type="text" id="cijenaPoGostu" disabled />
+            </div>
+        </div>
+
+        <div class="container2">
+            <div class="item">
+
+            </div>
+            <div class="item">
+                <label class="bold" for="ukupnaCijena">Sumarno za sve goste</label>
+                <input type="text" id="ukupnaCijena" disabled />
+            </div>
+        </div>
+        <hr>
+        <div id="gosti">
+
+        </div>
+        <br>
+        <br>
+        <div class="container2">
+            <div class="item">
+                <label for="brojIndeksa">Broj indeksa</label>
+                <input id="brojIndeksa" oninput="provjeriBrojIndeksa()" />
+            </div>
+            <div class="item">
+                <label for="phone">Phone</label>
+                <input id="phone" oninput="provjeriTelefon()" />
+            </div>
+        </div>
+
+        <textarea name="messagetxt" id="messagetxt"></textarea>
+
+        <button class="button" onclick="posalji()">Send</button>
+
+    </div>
+
+  
+
+    <div class="sub-footer">
+        <p>Copyright &copy; 2018 Company Name
+
+            - Design: <a rel="nofollow" href="http://www.templatemo.com">Template Mo</a></p>
+    </div>
+    <script src="./dialog/fit-dialog.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
